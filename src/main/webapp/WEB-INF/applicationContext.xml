@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+        <!-- Root Context: defines shared resources visible to all other web components -->
+        <bean id="ds"
+              class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+            <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+            <property name="url" value="jdbc:mysql://walab.handong.edu/p3_22000141" />
+            <property name="username" value="p3_22000141" />
+            <property name="password" value="Ecox6Xeegi" />
+        </bean>
+<!--        <bean id="jdbcTemplate"-->
+<!--        class="org.springframework.jdbc.core.JdbcTemplate">-->
+<!--        <property name="dataSource" ref="ds" />-->
+<!--        </bean>-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="ds"></property>
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath:mappers/*-mapper.xml"></property>
+    </bean>
+
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+        <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
 
 </beans>
+<!--<mvc:annotation-driven />-->
+<!--<context:component-scan base-package="com.example" />-->
+<!--<mvc:resources mapping="/img/**" location="/resources/img/" />-->
+<!--<bean id="loginCheckInterceptor" class="com.example.util.LoginCheckInterceptor"  />-->
+<!--<mvc:interceptors>
+<mvc:interceptor>
+<mvc:mapping path="/**"/>
+<mvc:exclude-mapping path="/resources/**"/>
+<mvc:exclude-mapping path="/img/**"/>
+<mvc:exclude-mapping path="/login/**"/>
+<ref bean="loginCheckInterceptor" />
+</mvc:interceptor></mvc:intercep-->
+
+<!--<interceptors>-->
+<!--<interceptor>-->
+<!--    <mapping path="/**" />-->
+<!--    <exclude-mapping path="/resources/**" />-->
+<!--    <exclude-mapping path="/img/*" />-->
+<!--    <exclude-mapping path="/login/*" />-->
+<!--    <beans:ref bean ="LoginCheckInterceptor" />-->
+<!--</interceptor>-->
+<!--</interceptors>-->

@@ -1,16 +1,24 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: gim-yein
-  Date: 2022/12/02
-  Time: 2:14 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
-</html>
+<%--<%@ page language="java" contentType="text/html; charset=UTF-8"--%>
+<%--         pageEncoding="UTF-8"%>--%>
+<%--<%@ page import="com.example.BoardVO"%>--%>
+<%--<%@ page import="com.example.BoardDAO"%>--%>
+<%--<%@ page import="com.example.util.FileUpload"%>--%>
+<%--<%@ page import="com.example.vo.MemberVO" %>--%>
+<%--<% request.setCharacterEncoding("utf-8"); %>--%>
+
+<%--&lt;%&ndash;<jsp:setProperty property="*" name="u"/>&ndash;%&gt;--%>
+
+<%--<%--%>
+<%--  MemberDAO memberDAO = new MemberDAO();--%>
+<%--  FileUpload upload = new FileUpload();--%>
+<%--  MemberVO u = upload.uploadPhoto(request);--%>
+<%--  int i = memberDAO.insertMember(u);--%>
+
+<%--  String msg = "데이터 추가 성공 !";--%>
+<%--  if(i == 0) msg = "[에러] 데이터 추가 ";--%>
+<%--%>--%>
+
+<%--<script>--%>
+<%--  alert('<%=msg%>');--%>
+<%--  location.href='posts.jsp';--%>
+<%--</script>--%>

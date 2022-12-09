@@ -2,9 +2,19 @@ package com.example;
 
 import java.util.Date;
 
-public class MemberVO {
+public class BoardVO {
     private int seq;
     private String title;
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    private String category;
     private String writer;
     private String content;
     private Date regdate;

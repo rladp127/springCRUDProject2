@@ -1,16 +1,16 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: gim-yein
-  Date: 2022/12/02
-  Time: 2:16 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
-</html>
+<%--<%@ page language="java" contentType="text/html; charset=UTF-8"--%>
+<%--         pageEncoding="UTF-8"%>--%>
+<%--<%@page import="com.example.BoardDAO"%>--%>
+<%--<%@ page import="com.example.BoardVO" %>--%>
+<%--<%@ page import="com.example.util.FileUpload" %>--%>
+
+<%--<% request.setCharacterEncoding("utf-8"); %>--%>
+
+<%--<%--%>
+<%--  MemberDAO memberDAO = new MemberDAO();--%>
+<%--  FileUpload upload = new FileUpload();--%>
+<%--  MemberVO u = upload.uploadPhoto(request);--%>
+
+<%--  int i = memberDAO.updateMember(u);--%>
+<%--  response.sendRedirect("posts.jsp");--%>
+<%--%>--%>
